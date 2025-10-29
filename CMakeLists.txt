@@ -7,12 +7,16 @@ project(DSPLearning
         LANGUAGES C CXX
 )
 
+add_subdirectory(matplotplusplus)
+
 # create lcg/gaussian library
 add_library(lcg
   src/ch02-noise/lcg.cpp
   src/ch02-noise/lcg.h
   src/ch02-noise/gaussian.cpp
   src/ch02-noise/gaussian.h
+  src/ch02-noise/clt.cpp
+  src/ch02-noise/clt.h
 )
 
 # where headers are
@@ -23,5 +27,7 @@ add_executable(noise_gen src/ch02-noise/main.cpp)
 
 # link library to executable
 target_link_libraries(noise_gen PRIVATE lcg)
+target_link_libraries(noise_gen PUBLIC matplot)
 
 # all above instead of one big add_library() command
+
