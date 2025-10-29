@@ -1,5 +1,6 @@
 #pragma once
 #include "lcg.h"
+namespace noise {
 /*
  * A Class for the Box-Muller Transform, which generates
  * normally distributed random numbers.
@@ -10,7 +11,6 @@
  *
  * X = (-2logR_1)^1/2 * cos(2piR_2)
  */
-namespace noise {
 class GaussianGenerator {
 public:
   GaussianGenerator(LCG &rng);

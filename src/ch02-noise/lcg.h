@@ -1,6 +1,7 @@
 #pragma once
 #include <chrono>
 #include <cstdint>
+namespace noise {
 /*
  * The Linear Congruential Generator (LCG) is used to
  * generate pseudo-random numbers.
@@ -15,7 +16,6 @@
  * A continuous sequence of random numbers can be generated,
  * all starting from the same seed S/X.
  */
-namespace noise {
 class LCG {
 public:
   LCG(uint64_t seed);

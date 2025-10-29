@@ -5,6 +5,8 @@ namespace noise {
 // LCG::LCG(uint64_t seed) : seed_{seed} {}
 GaussianGenerator::GaussianGenerator(LCG &rng) : rng_{rng} {}
 
+// Generate a normally distributed number X from random numbers
+// R1 and R2, based on the LCG given in the constructor.
 double GaussianGenerator::generate_gaussian() {
   //  X = (-2logR_1)^1/2 * cos(2piR_2)
   /*
